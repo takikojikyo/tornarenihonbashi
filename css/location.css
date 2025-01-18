@@ -1,0 +1,124 @@
+.location-page .section-title{
+  text-align: center;
+  font-size: 32px;
+}
+.location-page .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.location-title{
+  background-image: url("../img/download/location-top.jpg");
+  background-position: 50% 83%;
+  margin-bottom: 0;
+}
+
+.location-heading{
+  margin:  0 auto 50px;
+  width: 80%;
+  text-align: center;
+}
+.location-heading h3{
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.location-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.location-list p{
+  font-size: 14px;
+  line-height: 1.1;
+}
+.location-item{
+  margin-bottom: 80px;
+}
+.location-item:last-of-type{
+  margin-bottom: 0;
+}
+.location-list img{
+  height: 300px;
+  object-fit: cover;
+  /* margin-bottom: 5px; */
+}
+.location-1{
+  padding-bottom: 50px;
+}
+.location-2{
+  padding-bottom: 80px;
+}
+.location-2{
+  margin-top: 80px;
+}
+.life-list{
+  display: flex;
+  justify-content: space-between;
+}
+.life-list-left,.life-list-right{
+  width: 48%;
+}
+.life-list-item1{
+margin-bottom: 50px;
+}
+.life-list-item dl{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.life-list-item dt{
+  width: 70%;
+}
+.life-list-item dd{
+  width: 20%;
+}
+@media (max-width:960px){
+  .location-page .section-title{
+    font-size: 28px;
+  }
+  .location-heading h3{
+  font-size: 24px;
+}
+}
+@media (max-width:768px){
+  .location-list{
+    gap: 15px;
+    }
+  .location-list img{
+    height: 250px;
+  }
+  .location-heading{
+    width: 100%;
+  }
+  .location-heading h3{
+    font-size: 22px;
+  }
+  .life-list-left,.life-list-right{
+    width: 100%;
+  }
+  .life-list{
+    flex-direction: column;
+  }
+  .life-list-left{
+    margin-bottom: 50px;
+  }
+ 
+}
+@media (max-width:500px){
+  .location-page .section-title{
+    font-size: 24px;
+  }
+  .location-heading h3{
+    font-size: 20px;
+  }
+  .location-heading p{
+    font-size: 14px;
+  }
+  .location-list{
+    grid-template-columns: 1fr;
+    }
+    .location-list img{
+      height: 200px;
+    }
+
+}

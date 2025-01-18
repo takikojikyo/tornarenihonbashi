@@ -1,0 +1,168 @@
+.photomovie-page .section-title{
+  text-align: center;
+}
+.photomovie-page .section-title::after{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*ページタイトル*/
+
+.photomovie-title{ 
+  background-image: url(../img/download/2.JPG);
+  background-position: 50% 70%;
+}
+
+/*movie*/
+
+.movie{
+  margin-bottom: 120px;
+}
+.movie-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.movie-item1,.movie-item2{
+  margin-bottom: 80px;
+}
+.movie a{
+  display: block;
+  position: relative;
+}
+.movie a:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0px 10px 15px;
+  border-color: transparent transparent transparent #fdfdfd;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  margin: auto;
+}
+
+.movie-list img{
+  height:280px;
+  object-fit: cover;
+  
+}
+
+
+/*photo*/
+.title-sublabel{
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  position: relative;
+}
+.title-sublabel::after{
+  content: "";
+  width: 10px;
+  height: 3px;
+  background: #333;
+  position: absolute;
+  top: 50%;
+  left: -1px;
+}
+.photo-list{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+.photo-list img{
+  height: 280px;
+  object-fit: cover;
+}
+.photo-ex{
+  margin-bottom: 80px;
+}
+.photo-ex:last-of-type{
+  margin-bottom: 0;
+}
+.photo{
+  margin-bottom: 120px;
+}
+
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+#largeImage, #largeIframe {
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+}
+
+#largeIframe {
+  width: 100%;
+  height: 100%;
+}
+
+#closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  color: #fdfdfd;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/*レスポンシブ*/
+@media (max-width:960px){
+  .photo-list{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .photo-list img{
+    height: 250px;
+  }
+}
+@media (max-width:768px){
+  .photomovie-title h2{
+    font-size: 36px;
+  }
+  .photomovie-title .page-sub-title{
+    font-size: 24px;
+  }
+.movie-list{
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+.title-sublabel{
+  font-size: 18px;
+}
+
+}
+
+
+@media (max-width:500px){
+.photo-list{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.movie,.photo{
+  margin-bottom: 80px;
+}
+.title-sublabel{
+  font-size: 16px;
+}
+.photo-ex{
+  margin-bottom: 50px;
+}
+}

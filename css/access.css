@@ -1,0 +1,308 @@
+.access-page .section-title{
+  text-align: center;
+}
+.access-page .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.access-page .access-title{
+  background-image: url("../img/download/access-top.jpg");
+  background-position: 50% 20%;
+  margin-bottom: 0;
+}
+.access-topimg{
+object-fit: cover;
+object-position: 20% 50%;
+width: 37%;
+}
+.access-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.access-station{
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.access-station:nth-child(3){
+  margin-bottom: 30px;
+}
+.access-heading-tex{
+  width: 60%;
+}
+.ac-1{
+  font-size: 42px;
+  line-height: 1;
+  font-weight: bold;
+  color: #B37275;
+}
+.access-item{
+  padding-bottom: 50px;
+}
+.access-list{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+.access-list li{
+  text-align: center;
+  position: relative;
+    padding: 70px 10px 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden; 
+  }
+  .access-list li::after{
+    content: ''; /* 擬似要素を生成 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* 黒の半透明フィルター */
+  z-index: 1; /* フィルターをテキストの下に配置 */
+  }
+  .access-tokyo{
+    background-image: url("../img/download/accessb-tokyo.jpg");
+    background-position: 50% 45%;
+  }
+  .access-shibuya{
+    background-image: url("../img/download/accessb-shibuya.jpg");
+    background-position: 50% 17%;
+  }
+  .access-shinjuku{
+    background-image: url("../img/download/accessb-shinjuku.jpg");
+    background-position: 50% 80%;
+  }
+  .access-ikebukuro{
+    background-image: url("../img/download/accessb-ikebukuro.jpg");
+    background-position: 50% 40%;
+  }
+  .access-ueno{
+    background-image: url("../img/download/accessb-ueno.jpg");
+    background-position: 50% 55%;
+  }
+  .access-ginza{
+    background-image: url("../img/download/accessb-ginza.jpg");
+    background-position: 50% 95%;
+  }
+
+.access-list li p{
+  color: #fdfdfd;
+  position: relative;
+  z-index: 2;
+}
+.station{
+  font-size: 24px;
+  padding: 0 5px 0 0;
+}
+.num-access{
+  font-size: 48px;
+  line-height: 1.1;
+  padding: 0 5px;
+}
+.tag-access{
+  color: #fdfdfd;
+  background: #B37275;
+  font-size: 20px;
+  padding: 5px 10px;
+  position: absolute;
+  top: 7%;
+  left: 13%;
+  z-index: 2;
+}
+.access-2,
+.access-3,
+.access-4{
+  margin-bottom: 80px;
+}
+.access-2{
+  margin-top: 50px;
+}
+.access-2>img{
+  height: 300px;
+  width: 70%;
+  object-fit: cover;
+  object-position: 50% 44%;
+  margin-bottom: 30px;
+}
+.access-list2{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  text-align: center;
+}
+.access-list2 li{
+  position: relative;
+  background: #606461;
+  color: #fdfdfd;
+  padding: 10px 10px 15px;
+}
+.access-3-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.access-3-box img{
+  width: 40%;
+  height: 250px;
+  object-fit: cover;
+  object-position: 60% 83%;
+}
+.access-3-box p{
+  width: 55%;
+}
+@media (max-width:960px){
+  
+
+  .station{
+    font-size: 20px;
+  }
+  .num-access{
+    font-size: 48px;
+    padding: 0 5px;
+  }
+  .tag-access{
+    font-size: 18px;
+    padding: 3px 10px;
+  }
+  .access-3-box img{
+    width: 35%;
+    height: 200px;
+  }
+  .access-3-box p{
+    width: 60%;
+  }
+}
+@media (max-width:768px){
+  .access-heading{
+    flex-direction: column-reverse;
+  }
+  .access-topimg{
+    width: 80%;
+    align-self: flex-end;
+    height: 300px;
+    margin-bottom: 30px;
+    }
+  .access-heading-tex{
+    width: 100%;
+  }
+  .ac-1{
+    font-size: 36px;
+  }
+  .access-list{
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+  }
+  .access-list li p{
+    font-size: 14px;
+  }
+  .station{
+    font-size: 20px;
+    padding: 0 3px 0 0;
+  }
+  
+  .tag-access{
+    font-size: 20px;
+    padding: 3px 5px;
+  }  
+
+  .access-2>img{
+    height: 250px;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .access-list2{
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .access-3-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .access-3-box img{
+    width: 45%;
+    height: 180px;
+  }
+  .access-3-box p{
+    width: 50%;
+    font-size: 14px;
+  }
+  iframe{
+    height: 300px;
+  }
+}
+@media (max-width:500px){
+  .access-heading{
+    margin-bottom: 50px;
+  }
+  .access-topimg{
+    width: 90%;
+    height: 250px;
+    margin-bottom: 20px;
+    }
+  .ac-1{
+    font-size: 36px;
+  }
+  .access-station:nth-child(3){
+    margin-bottom: 20px;
+  }
+.access-heading-tex p{
+    font-size: 14px;
+  }
+  
+.access-item {
+  padding-bottom: 50px;
+}
+.access-2 p{
+    font-size: 14px;
+  }
+  .access-2>img{
+    height: 250px;
+  }
+  .access-station{
+    line-height: 1.5;
+  }
+  .ac-1{
+    font-size: 28px;
+  }
+  .access-2 {
+    margin-top: 0px;
+}
+  .access-2>img{
+    height: 180px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .access-4 iframe{
+    height: 350px;
+  }
+  .num-access{
+    font-size: 32px;
+    padding: 0 3px;
+  }
+  .tag-access{
+    font-size: 16px;
+  }
+  .access-list li{
+      height: 140px;
+    }
+    .access-list{
+      gap: 10px;
+    }
+    .access-3-box{
+      flex-direction: column;
+    }
+    .access-3-box img{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .access-3-box p{
+      width: 100%;
+    }
+}

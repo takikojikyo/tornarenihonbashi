@@ -1,0 +1,192 @@
+/*ページタイトル*/
+.plan-page .section-title{
+  text-align: center;
+}
+.plan-page .section-title::after{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.plan-title{ 
+  background-image: url("../img/download/plan-top.jpg");
+    background-position: 50% 60%;
+}
+
+.plan-heading{
+  background-color: rgba(96,100,97,0.1);
+  padding: 40px;
+  margin-bottom: 80px;
+}
+.plan-heading>p{
+  margin-bottom: 20px;
+  text-align: center;
+}
+.plan-heading .plan-btn{
+  display: grid;
+  grid-template-columns: repeat(3,1fr); /* 自動調整 */
+  gap: 15px; /* ボタン間の隙間 */
+}
+.plan-heading .plan-btn li{
+  text-align: center;
+}
+.plan-heading .plan-btn a{
+  position: relative;
+  color: #fdfdfd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  transition: all 0.5s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%; /* ボタン幅を親要素に合わせる */
+}
+.plan-heading .plan-btn li:nth-child(1) a{
+  background-image: url("../img/download/pb1.jpg");
+  background-position: 50% 40%;
+}
+.plan-heading .plan-btn li:nth-child(2) a{
+  background-image: url("../img/download/pb2.jpg");
+  background-position: 50% 30%;
+}
+.plan-heading .plan-btn li:nth-child(3) a{
+  background-image: url("../img/download/pb3.jpg");
+  background-position: 50% 40%;
+}
+.plan-heading .plan-btn li:nth-child(4) a{
+  background-image: url("../img/download/pb4.jpg");
+  background-position: 50% 25%;
+}
+.plan-heading .plan-btn li:nth-child(5) a{
+  background-image: url("../img/download/pb5.jpg");
+  background-position: 50% 40%;
+}
+.plan-heading .plan-btn a::before{
+  content: ''; /* 擬似要素を生成 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* 黒の半透明フィルター */
+  z-index: 1; /* フィルターをテキストの下に配置 */
+}
+.plan-btn a:hover .arrow-box{
+  right: 8%;
+}
+.plan-btn a:hover .arrow-box .arrow{
+  width: 25px;
+}
+.plan-heading .plan-btn p{
+  position: relative;
+  z-index: 2;
+}
+.plan-heading .plan-btn .arrow-box{
+  z-index: 2;
+}
+/*plan-list*/
+
+
+.plan-list{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:20px;
+}
+.plan-list li{
+  background: #fdfdfd;
+  padding: 10px;
+border: 1px solid #ccc;
+height: 320px;
+position: relative;
+}
+.plan-list img{
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+.plan-list p{
+  position: absolute;
+  bottom: 4%;
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  line-height: 1.1
+}
+
+.plan-1ldk,.plan-3ldk{
+background: rgba(96,100,97,0.1);
+padding: 50px 0;
+margin-bottom: 80px;
+}
+.plan-1R,.plan-2ldk,.plan-4ldk{
+  margin-bottom: 120px;
+}
+
+/*lightbox追記修正*/
+.lightboxOverlay{/*拡大時のモーダル*/
+  width:100% !important;
+}
+.lb-outerContainer,.lb-dataContainer{
+  width:calc(100% - 20px) !important;
+  max-width:400px;/*拡大時の最大幅*/
+}
+.lb-outerContainer{
+  height:auto !important;
+  margin-left:auto;
+  margin-right:auto;
+}
+.lb-image{
+  width:100% !important;
+  height:auto !important;
+}
+
+
+/*レスポンシブ*/
+@media (max-width:960px){
+
+  .plan-list{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .plan-list img{
+    max-height: 240px;
+  }
+ 
+}
+@media (max-width:768px){  
+  .plan-heading .plan-btn{
+    grid-template-columns: repeat(2,1fr); 
+  }
+  .plan-heading .plan-btn a{
+    padding: 40px 0;
+  }
+  .plan-heading{
+    padding: 20px;
+  }
+
+}
+
+@media (max-width:500px){
+  .plan-heading {
+    padding: 20px 10px;
+}
+  .plan-heading .plan-btn{
+    gap: 10px;
+  }
+.plan-list{
+  grid-template-columns: 1fr;
+  gap:10px;
+}
+.plan-heading>p{
+  font-size: 14px;
+}
+
+.plan-list li{
+height: 230px;
+}
+.plan-list img{
+  max-height: 170px;
+}
+.plan-list p{
+  font-size: 13px;
+}
+}

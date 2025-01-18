@@ -1,0 +1,80 @@
+.facility-page .section-title{
+  text-align: center;
+}
+
+.facility-title{
+  background-image: url("../img1/共用部/2.JPG");
+  background-position: 50% 48%;
+}
+.facility-page .section-title::after{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.facility-item:not(:last-of-type){
+  margin-bottom: 80px;
+}
+
+.facility-list{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+.facility-list img{
+  height: 300px;
+  object-fit: cover;
+}
+.facility-list .fa-title{
+  font-size: 16px;
+}
+.facility-list p{
+  line-height: 1.1;
+  font-size: 14px;
+}
+.facility-1,.facility-2,.facility-3,#fa-1{
+  margin-bottom: 120px;
+}
+.facility-1 .section-sub-title,
+.facility-2 .section-sub-title,
+.facility-3 .section-sub-title{
+  font-weight: bold;
+  font-size: 28px;
+}
+
+
+
+
+@media (max-width: 960px) {
+  .facility-list{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media (max-width: 768px) {
+  
+
+  .facility-1 .section-sub-title,
+.facility-2 .section-sub-title,
+.facility-3 .section-sub-title{
+  font-size: 20px;
+  }
+  .facility1-title{
+    font-size: 20px;
+  }
+  .facility-1,.facility-2,.facility-3,#fa-1{
+    margin-bottom: 80px;
+  }
+
+
+}
+@media (max-width:500px){
+  .facility-list{
+    grid-template-columns: 1fr;
+  }
+  .facility-list img{
+    height: 250px;
+  }
+  .facility-list p{
+    font-size: 13px;
+  }
+}
